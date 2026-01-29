@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext", /* Required when module is NodeNext */
+    "lib": [
+      "ESNext",
+      "DOM",
+      "DOM.Iterable"
+    ], /* DOM is for Vite/Browser stuff */
+    "paths": {
+      "#/*": [
+        "./src/*"
+      ]
+    },
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "isolatedModules": true, /* Vite needs this to stay fast */
+    "noEmit": true, /* Vite handles the building, not TS */
+  }
+}

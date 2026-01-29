@@ -1,0 +1,46 @@
+export const SOL_PHYS = {
+    GRAVITY: { x: 0, y: -9.81, z: 0 },
+    TIMESTEP: 1 / 60,
+    TERMINAL_VELOCITY: 66,
+    TERMINAL_VELOCITY_SQ: 66 * 66,
+};
+
+export const SOL_RENDER = {
+    ENTITY_RENDER_DISTANCE: 150,
+}
+
+export const COLLISION_GROUPS = {
+    WORLD: 0b0001,
+    PLAYER: 0b0010,
+    ENEMY: 0b0100,
+    RAY: 0b1000,
+    PROJECTILE: 0b1001,
+};
+
+export enum Actions {
+    NONE = 0,
+    JUMP = 1 << 0,
+    FWD = 1 << 1,
+    BWD = 1 << 2,
+    LEFT = 1 << 3,
+    RIGHT = 1 << 4,
+    ABILITY1 = 1 << 5,
+    ABILITY2 = 1 << 6,
+    NEXTE = 1 << 7,
+    LASTE = 1 << 8,
+};
+
+export enum EntityTypes {
+    none,
+    user,
+    player,
+    box,
+    wizard,
+    golem,
+}
+
+export enum NetworkRole {
+    LOCAL,
+    REMOTE,
+    AUTHORITY
+}
