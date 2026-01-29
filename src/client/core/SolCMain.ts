@@ -15,9 +15,10 @@ if (!canvas) {
     canvas.style.zIndex = "1";
     document.appendChild(canvas);
 }
-const solInput = new SolInput(canvas);
+
 const solNet = new SolCNet();
-const solRender = new SolRender();
+const solInput = new SolInput(canvas);
+const solRender = new SolRender(canvas);
 const solGame = new SolCGame(solInput, solNet, solRender);
 
 solGame.start();
